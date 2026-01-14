@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Green Farming Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>🌿 Sustainable Farming Dashboard</h1>
+<h3 id="userEmail"></h3>
+
+<div class="dashboard-grid">
+
+  <!-- Carbon Calculator -->
+  <div class="card">
+    <h2>🌱 Carbon Calculator</h2>
+    <input type="number" id="electricity" placeholder="Electricity Units">
+    <input type="number" id="transport" placeholder="Transport KM">
+    <input type="number" id="fuel" placeholder="Fuel Liters">
+    <button id="calcBtn">Calculate Emission</button>
+    <p id="result"></p>
+  </div>
+
+  <!-- Carbon Meter -->
+  <div class="card">
+    <h2>🎥 Carbon Meter</h2>
+    <div class="meter">
+      <div id="meterFill"></div>
+    </div>
+  </div>
+
+  <!-- Badges -->
+  <div class="card badges-card">
+    <h2>🏅 Your Badges</h2>
+    <div id="badges" class="badge-container"></div>
+    <p>Click a badge to see its meaning!</p>
+    <canvas id="particleCanvas"></canvas>
+  </div>
+
+  <!-- Leaderboard -->
+  <div class="card">
+    <h2>📊 Leaderboard</h2>
+    <ul id="leaderboard"></ul>
+  </div>
+
+  <!-- Daily Carbon Graph -->
+  <div class="card">
+    <h2>📈 Daily Carbon Emission</h2>
+    <canvas id="co2Chart"></canvas>
+  </div>
+
+  <!-- Tips Section -->
+  <div class="card tips-card">
+    <h2>💡 Tips to Reduce Carbon</h2>
+    <p id="tipMessage">Click the button below for a tip!</p>
+    <button id="tipBtn">Get Tip</button>
+  </div>
+
+  <!-- Today’s Challenge -->
+  <div class="card challenge-card">
+    <h2>🌍 Today’s Green Challenge</h2>
+    <p id="challengeText">Avoid unnecessary electricity usage today!</p>
+  </div>
+
+  <!-- Gamified Mini-Game -->
+  <div class="card game-card">
+    <h2>🎮 Plant a Tree Game</h2>
+    <p>Click the tree to plant it and earn green points!</p>
+    <canvas id="treeGame" width="300" height="200" style="border:1px solid #ccc;"></canvas>
+    <p>Points: <span id="gamePoints">0</span></p>
+    <button id="resetGameBtn">Reset Game</button>
+  </div>
+
+</div>
+
+<!-- Reward Popup -->
+<div id="rewardPopup" class="popup">
+  <div class="popup-content">
+    🎁<h2>Green Hero!</h2>
+    <p>Credits earned for low emissions 🌱</p>
+    <button onclick="closePopup()">Awesome!</button>
+  </div>
+</div>
+
+<!-- Bottom message -->
+<div class="bottom-message">
+  <p><b>🌱 Reduce Carbon Emissions Today. Earn Credits. Make a Difference! 🌱</b></p>
+  <button id="calcBtnBottom">Calculate & Earn Credits</button>
+</div>
+
+<script src="dashboard.js"></script>
+<script src="particles.js"></script>
+</body>
+</html>

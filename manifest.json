@@ -1,0 +1,8 @@
+{
+  "name": "Sustainable Farming Platform",
+  "short_name": "GreenFarm",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#e8f5e9",
+  "theme_color": "#2e7d32"
+}
